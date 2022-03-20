@@ -17,7 +17,7 @@ if (upper_q1 == "A")
 }
 else
 {
-    Console.WriteLine("This is incorrect");
+    Console.WriteLine("This is incorrect, the answer is A");
 }
 Console.WriteLine(" ");
 Console.WriteLine("Question 2: What is the Maori word for Love?");
@@ -33,7 +33,7 @@ if (upper_q2 == "B")
 }
 else 
 {
-    Console.WriteLine("This is incorrect");
+    Console.WriteLine("This is incorrect, the answer is B");
 }
 Console.WriteLine(" ");
 Console.WriteLine("Question 3: What is the Maori word for Work?");
@@ -49,7 +49,7 @@ if (upper_q3 == "A")
 }
 else
 {
-    Console.WriteLine("This is incorrect");
+    Console.WriteLine("This is incorrect, the answer is A");
 }
 Console.WriteLine(" ");
 Console.WriteLine("Question 4: What is Maori for the word Hello?");
@@ -65,7 +65,7 @@ if (upper_q4 == "C")
 }
 else
 {
-    Console.WriteLine("This is incorrect");
+    Console.WriteLine("This is incorrect, the answer is C");
 }
 Console.WriteLine(" ");
     Console.WriteLine("Now the questions are going to get harder, good luck.");
@@ -84,7 +84,7 @@ if (upper_q5 == "B")
 }
 else
 {
-    Console.WriteLine("This is incorrect");
+    Console.WriteLine("This is incorrect, the answer is B");
 }
 Console.WriteLine(" ");
 Console.WriteLine("Question 6: What is the Maori word for children");
@@ -100,7 +100,7 @@ if (upper_q6 == "C")
 }
 else
 {
-    Console.WriteLine("This is incorrect");
+    Console.WriteLine("This is incorrect, the answer is C");
 }
 Console.WriteLine(" ");
 Console.WriteLine("Question 7: What is the Maori word for funeral");
@@ -132,5 +132,5 @@ if (upper_q8 == "B")
 }
 else
 {
-    Console.WriteLine("This is incorrect");
+    Console.WriteLine("This is incorrect, the answer is B");
 }
