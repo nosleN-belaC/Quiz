@@ -134,3 +134,19 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is B");
 }
+Console.WriteLine(" ");
+Console.WriteLine("Question 9: What is the name for a Maori chief?");
+Console.WriteLine("A: Whare whakairo");
+Console.WriteLine("B: Rangatira");
+Console.WriteLine("C: Whanaunga");
+
+string q9 = Console.ReadLine();
+string upper_q9 = q9.ToUpper();
+if (upper_q9 == "B")
+{
+    Console.WriteLine("You are correct");
+}
+else
+{
+    Console.WriteLine("This is incorrect, the answer is B");
+}
