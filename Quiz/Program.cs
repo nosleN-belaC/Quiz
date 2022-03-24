@@ -8,7 +8,6 @@ Console.WriteLine("A: Whanau");
 Console.WriteLine("B: Aotearoa");
 Console.WriteLine("C: Haka");
 
-// This makes it so the answer no matter what case it will make it capital
 string q1 = (Console.ReadLine());
 string upper_q1 = q1.ToUpper();
 if (upper_q1 == "A")
@@ -150,3 +149,22 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is B");
 }
+Console.WriteLine(" ");
+Console.WriteLine("Question 10: What does Manuhiri mean in English?");
+Console.WriteLine("A: Greenstone");
+Console.WriteLine("B: Goodbye");
+Console.WriteLine("C: Guests");
+
+string q10 = Console.ReadLine();
+string upper_q10 = q10.ToUpper();
+if (upper_q10 == "C")
+{
+    Console.WriteLine("You are correct");
+}
+else
+{
+    Console.WriteLine("This is incorrect, the answer is C");
+}
+Console.WriteLine(" ");
+Console.WriteLine("Well done you have finished the quiz!");
+Console.WriteLine("You got a score of:  ");
