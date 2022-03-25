@@ -1,22 +1,23 @@
 ﻿// Made by Caleb Nelson
+Console.WriteLine(" ");
 Console.WriteLine("This is a Te Reo Maori word and phrase quiz.");
 Console.WriteLine("If you enter any other character that is not a, b, or c you will be incorrect.");
 Console.WriteLine("There are 10 questions and you only have one shot at each one so make it count.");
 Console.WriteLine("The questions start off easy and get harder as the quiz goes on.\n");
+quizStart:
 Console.WriteLine("Question 1: What is the Maori word for family?");
 Console.WriteLine("A: Whanau");
 Console.WriteLine("B: Aotearoa");
 Console.WriteLine("C: Haka");
 
-string q1 = (Console.ReadLine());
-string upper_q1 = q1.ToUpper();
-if (upper_q1 == "A")
+string q1 = (Console.ReadLine().ToUpper());
+if (q1 == "A")
 {
     Console.WriteLine("You are correct");
 }
 else
 {
-    Console.WriteLine("This is incorrect, the answer is A");
+    Console.WriteLine("This is incorrect, would you like to retry?");
 }
 Console.WriteLine(" ");
 Console.WriteLine("Question 2: What is the Maori word for Love?");
@@ -24,9 +25,9 @@ Console.WriteLine("A: Awa");
 Console.WriteLine("B: Aroha");
 Console.WriteLine("C: Kai");
 
-string q2 = Console.ReadLine();
-string upper_q2 = q2.ToUpper();
-if (upper_q2 == "B")
+string q2 = (Console.ReadLine().ToUpper());
+
+if (q2 == "B")
 {
     Console.WriteLine("You are correct");
 }
@@ -40,9 +41,8 @@ Console.WriteLine("A: Mahi ");
 Console.WriteLine("B: Kiwi");
 Console.WriteLine("C: Marae");
 
-string q3 = Console.ReadLine();
-string upper_q3 = q3.ToUpper();
-if (upper_q3 == "A")
+string q3 = (Console.ReadLine().ToUpper());
+if (q3 == "A")
 {
     Console.WriteLine("You are correct");
 }
@@ -56,9 +56,8 @@ Console.WriteLine("A: Mōrena");
 Console.WriteLine("B: Kapa Haka");
 Console.WriteLine("C: Kia ora");
 
-string q4 = Console.ReadLine();
-string upper_q4 = q4.ToUpper();
-if (upper_q4 == "C")
+string q4 = (Console.ReadLine().ToUpper());
+if (q4 == "C")
 {
     Console.WriteLine("You are correct");
 }
@@ -75,9 +74,8 @@ Console.WriteLine("A: Tēnā koe");
 Console.WriteLine("B: Haere mai");
 Console.WriteLine("C: E noho");
 
-string q5 = Console.ReadLine();
-string upper_q5 = q5.ToUpper();
-if (upper_q5 == "B")
+string q5 = (Console.ReadLine().ToUpper());
+if (q5 == "B")
 {
     Console.WriteLine("You are correct");
 }
@@ -91,9 +89,8 @@ Console.WriteLine("A: Waiata");
 Console.WriteLine("B: Tamāhine");
 Console.WriteLine("C: Tamariki ");
 
-string q6 = Console.ReadLine();
-string upper_q6 = q6.ToUpper();
-if (upper_q6 == "C")
+string q6 = (Console.ReadLine().ToUpper());
+if (q6 == "C")
 {
     Console.WriteLine("You are correct");
 }
@@ -107,9 +104,8 @@ Console.WriteLine("A: Taonga");
 Console.WriteLine("B: Tangi");
 Console.WriteLine("C: Tāne");
 
-string q7 = Console.ReadLine();
-string upper_q7 = q7.ToUpper();
-if (upper_q7 == "B")
+string q7 = (Console.ReadLine().ToUpper());
+if (q7 == "B")
 {
     Console.WriteLine("You are correct");
 }
@@ -123,9 +119,8 @@ Console.WriteLine("A: Manuhiri");
 Console.WriteLine("B: Kaumatua");
 Console.WriteLine("C: Whenua");
 
-string q8 = Console.ReadLine();
-string upper_q8 = q8.ToUpper();
-if (upper_q8 == "B")
+string q8 = (Console.ReadLine().ToUpper());
+if (q8 == "B")
 {
     Console.WriteLine("You are correct");
 }
@@ -139,9 +134,8 @@ Console.WriteLine("A: Whare whakairo");
 Console.WriteLine("B: Rangatira");
 Console.WriteLine("C: Whanaunga");
 
-string q9 = Console.ReadLine();
-string upper_q9 = q9.ToUpper();
-if (upper_q9 == "B")
+string q9 = (Console.ReadLine().ToUpper());
+if (q9 == "B")
 {
     Console.WriteLine("You are correct");
 }
@@ -155,9 +149,8 @@ Console.WriteLine("A: Greenstone");
 Console.WriteLine("B: Goodbye");
 Console.WriteLine("C: Guests");
 
-string q10 = Console.ReadLine();
-string upper_q10 = q10.ToUpper();
-if (upper_q10 == "C")
+string q10 = (Console.ReadLine().ToUpper());
+if (q10 == "C")
 {
     Console.WriteLine("You are correct");
 }
@@ -168,3 +161,14 @@ else
 Console.WriteLine(" ");
 Console.WriteLine("Well done you have finished the quiz!");
 Console.WriteLine("You got a score of:  ");
+Console.WriteLine(" ");
+Console.WriteLine("Would you like to try again and try get a better score?");
+string retry = (Console.ReadLine().ToUpper());
+if (retry == "Yes")
+{
+    goto quizStart;
+}
+else if (retry == "No")
+{
+    Console.WriteLine("Have a nice day.");
+}
