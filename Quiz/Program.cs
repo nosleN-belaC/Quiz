@@ -1,9 +1,19 @@
-﻿// Made by Caleb Nelson
+﻿// This code asks you 10 multi choice questions about the Maori language
 Console.WriteLine(" ");
 Console.WriteLine("This is a Te Reo Maori word and phrase quiz.");
 Console.WriteLine("If you enter any other character that is not a, b, or c you will be incorrect.");
 Console.WriteLine("There are 10 questions and you only have one shot at each one so make it count.");
 Console.WriteLine("The questions start off easy and get harder as the quiz goes on.\n");
+Console.WriteLine("Would you like to start at the harder questions?");
+string q0 = (Console.ReadLine().ToUpper());
+if (q0 == "YES")
+{
+    goto harderQuestions;
+}
+else
+{
+    goto quizStart;
+}
 quizStart:
 Console.WriteLine("Question 1: What is the Maori word for family?");
 Console.WriteLine("A: Whanau");
@@ -17,7 +27,7 @@ if (q1 == "A")
 }
 else
 {
-    Console.WriteLine("This is incorrect, would you like to retry?");
+    Console.WriteLine("This is incorrect, the answer is A");
 }
 Console.WriteLine(" ");
 Console.WriteLine("Question 2: What is the Maori word for Love?");
@@ -31,7 +41,7 @@ if (q2 == "B")
 {
     Console.WriteLine("You are correct");
 }
-else 
+else
 {
     Console.WriteLine("This is incorrect, the answer is B");
 }
@@ -66,7 +76,7 @@ else
     Console.WriteLine("This is incorrect, the answer is C");
 }
 Console.WriteLine(" ");
-    Console.WriteLine("Now the questions are going to get harder, good luck.");
+Console.WriteLine("Now the questions are going to get harder, good luck.");
 
 Console.WriteLine(" ");
 Console.WriteLine("Question 5: What is the Maori phrase for Welcome");
@@ -98,6 +108,7 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is C");
 }
+harderQuestions:
 Console.WriteLine(" ");
 Console.WriteLine("Question 7: What is the Maori word for funeral");
 Console.WriteLine("A: Taonga");
@@ -158,6 +169,22 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is C");
 }
+Console.WriteLine(" ");
+Console.WriteLine("Question 11: What does Hei āpōpō mean in English?");
+Console.WriteLine("A: See you tomorrow");
+Console.WriteLine("B: Many thanks");
+Console.WriteLine("C: Regards");
+
+string q11 = (Console.ReadLine().ToUpper());
+if (q11 == "A")
+{
+    Console.WriteLine("You are correct");
+}
+else
+{
+    Console.WriteLine("This is incorrect, the answer is A");
+}
+
 Console.WriteLine(" ");
 Console.WriteLine("Well done you have finished the quiz!");
 Console.WriteLine("You got a score of:  ");
