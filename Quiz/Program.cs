@@ -4,7 +4,7 @@ Console.WriteLine("This is a Te Reo Maori word and phrase quiz.");
 Console.WriteLine("If you enter any other character that is not a, b, or c you will be incorrect.");
 Console.WriteLine("There are 10 questions and you only have one shot at each one so make it count.");
 Console.WriteLine("The questions start off easy and get harder as the quiz goes on.\n");
-Console.WriteLine("Would you like to start at the harder questions?");
+Console.WriteLine("Would you like to start with the harder questions?");
 string q0 = (Console.ReadLine().ToUpper());
 if (q0 == "YES")
 {
@@ -14,7 +14,9 @@ else
 {
     goto quizStart;
 }
+
 quizStart:
+Console.WriteLine(" ");
 Console.WriteLine("Question 1: What is the Maori word for family?");
 Console.WriteLine("A: Whanau");
 Console.WriteLine("B: Aotearoa");
@@ -29,6 +31,7 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is A");
 }
+
 Console.WriteLine(" ");
 Console.WriteLine("Question 2: What is the Maori word for Love?");
 Console.WriteLine("A: Awa");
@@ -45,6 +48,7 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is B");
 }
+
 Console.WriteLine(" ");
 Console.WriteLine("Question 3: What is the Maori word for Work?");
 Console.WriteLine("A: Mahi ");
@@ -60,6 +64,7 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is A");
 }
+
 Console.WriteLine(" ");
 Console.WriteLine("Question 4: What is Maori for the word Hello?");
 Console.WriteLine("A: Mōrena");
@@ -75,6 +80,7 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is C");
 }
+
 Console.WriteLine(" ");
 Console.WriteLine("Now the questions are going to get harder, good luck.");
 
@@ -93,6 +99,7 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is B");
 }
+
 Console.WriteLine(" ");
 Console.WriteLine("Question 6: What is the Maori word for children");
 Console.WriteLine("A: Waiata");
@@ -108,6 +115,7 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is C");
 }
+
 harderQuestions:
 Console.WriteLine(" ");
 Console.WriteLine("Question 7: What is the Maori word for funeral");
@@ -124,6 +132,7 @@ else
 {
     Console.WriteLine("This is incorrect");
 }
+
 Console.WriteLine(" ");
 Console.WriteLine("Question 8: What is the Maori word for elder");
 Console.WriteLine("A: Manuhiri");
@@ -139,6 +148,7 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is B");
 }
+
 Console.WriteLine(" ");
 Console.WriteLine("Question 9: What is the name for a Maori chief?");
 Console.WriteLine("A: Whare whakairo");
@@ -154,6 +164,7 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is B");
 }
+
 Console.WriteLine(" ");
 Console.WriteLine("Question 10: What does Manuhiri mean in English?");
 Console.WriteLine("A: Greenstone");
@@ -169,6 +180,7 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is C");
 }
+
 Console.WriteLine(" ");
 Console.WriteLine("Question 11: What does Hei āpōpō mean in English?");
 Console.WriteLine("A: See you tomorrow");
@@ -186,6 +198,70 @@ else
 }
 
 Console.WriteLine(" ");
+Console.WriteLine("Question 12: What does Hospitality, kindness, generosity, support mean in Maori?");
+Console.WriteLine("A: Waiata");
+Console.WriteLine("B: Manaakitanga");
+Console.WriteLine("C: Kaikōrero");
+
+string q12 = (Console.ReadLine().ToUpper());
+if (q12 == "B")
+{
+    Console.WriteLine("You are correct");
+}
+else
+{
+    Console.WriteLine("This is incorrect, the answer is B");
+}
+
+Console.WriteLine(" ");
+Console.WriteLine("Question 13: What does Whanaungatanga mean in English?");
+Console.WriteLine("A: Relationship, kinship, sense of family connection");
+Console.WriteLine("B: Respect for hosts or kindness to guests, to entertain, to look after");
+Console.WriteLine("C: Confiscate, take by force");
+
+string q13 = (Console.ReadLine().ToUpper());
+if (q13 == "A")
+{
+    Console.WriteLine("You are correct");
+}
+else
+{
+    Console.WriteLine("This is incorrect, the answer is B");
+}
+
+Console.WriteLine(" ");
+Console.WriteLine("Question 14: What is Toilet in Maori?");
+Console.WriteLine("A: Rohe");
+Console.WriteLine("B: Noa");
+Console.WriteLine("C: Whare paku");
+
+string q14 = (Console.ReadLine().ToUpper());
+if (q14 == "C")
+{
+    Console.WriteLine("You are correct");
+}
+else
+{
+    Console.WriteLine("This is incorrect, the answer is C");
+}
+
+Console.WriteLine(" ");
+Console.WriteLine("Question 15: What does Tūrangawaewae mean in English?");
+Console.WriteLine("A: Fostered or adopted child");
+Console.WriteLine("B: Genealogy");
+Console.WriteLine("C: A place to stand, a place to belong to, a seat or location of identity");
+
+string q15 = (Console.ReadLine().ToUpper());
+if (q15 == "C")
+{
+    Console.WriteLine("You are correct");
+}
+else
+{
+    Console.WriteLine("This is incorrect, the answer is C");
+}
+
+Console.WriteLine(" ");
 Console.WriteLine("Well done you have finished the quiz!");
 Console.WriteLine("You got a score of:  ");
 Console.WriteLine(" ");
@@ -195,7 +271,7 @@ if (retry == "Yes")
 {
     goto quizStart;
 }
-else if (retry == "No")
+else
 {
     Console.WriteLine("Have a nice day.");
 }
