@@ -1,4 +1,7 @@
 ﻿// This code asks you 10 multi choice questions about the Maori language
+
+int q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer, q7Answer, q8Answer, q9Answer, q10Answer, q11Answer, q12Answer, q13Answer, q14Answer, q15Answer;
+
 Console.WriteLine(" ");
 Console.WriteLine("This is a Te Reo Maori word and phrase quiz.");
 Console.WriteLine("If you enter any other character that is not a, b, or c you will be incorrect.");
@@ -31,6 +34,14 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is A");
 }
+if (q1 == "A")
+{
+    q1Answer = 1;
+}
+else
+{
+    q1Answer = 0;
+}
 
 Console.WriteLine(" ");
 Console.WriteLine("Question 2: What is the Maori word for Love?");
@@ -48,6 +59,14 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is B");
 }
+if (q2 == "B")
+{
+    q2Answer = 1;
+}
+else
+{
+    q2Answer = 0;
+}
 
 Console.WriteLine(" ");
 Console.WriteLine("Question 3: What is the Maori word for Work?");
@@ -64,6 +83,14 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is A");
 }
+if (q3 == "A")
+{
+    q3Answer = 1;
+}
+else
+{
+    q3Answer = 0;
+}
 
 Console.WriteLine(" ");
 Console.WriteLine("Question 4: What is Maori for the word Hello?");
@@ -79,6 +106,14 @@ if (q4 == "C")
 else
 {
     Console.WriteLine("This is incorrect, the answer is C");
+}
+if (q4 == "C")
+{
+    q4Answer = 1;
+}
+else
+{
+    q4Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -99,6 +134,14 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is B");
 }
+if (q5 == "B")
+{
+    q5Answer = 1;
+}
+else
+{
+    q5Answer = 0;
+}
 
 Console.WriteLine(" ");
 Console.WriteLine("Question 6: What is the Maori word for children");
@@ -114,6 +157,14 @@ if (q6 == "C")
 else
 {
     Console.WriteLine("This is incorrect, the answer is C");
+}
+if (q6 == "C")
+{
+    q6Answer = 1;
+}
+else
+{
+    q6Answer = 0;
 }
 
 harderQuestions:
@@ -132,6 +183,14 @@ else
 {
     Console.WriteLine("This is incorrect");
 }
+if (q7 == "B")
+{
+    q7Answer = 1;
+}
+else
+{
+    q7Answer = 0;
+}
 
 Console.WriteLine(" ");
 Console.WriteLine("Question 8: What is the Maori word for elder");
@@ -147,6 +206,14 @@ if (q8 == "B")
 else
 {
     Console.WriteLine("This is incorrect, the answer is B");
+}
+if (q8 == "B")
+{
+    q8Answer = 1;
+}
+else
+{
+    q8Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -164,6 +231,14 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is B");
 }
+if (q9 == "B")
+{
+    q9Answer = 1;
+}
+else
+{
+    q9Answer = 0;
+}
 
 Console.WriteLine(" ");
 Console.WriteLine("Question 10: What does Manuhiri mean in English?");
@@ -179,6 +254,14 @@ if (q10 == "C")
 else
 {
     Console.WriteLine("This is incorrect, the answer is C");
+}
+if (q10 == "C")
+{
+    q10Answer = 1;
+}
+else
+{
+    q10Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -196,6 +279,14 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is A");
 }
+if (q11 == "A")
+{
+    q11Answer = 1;
+}
+else
+{
+    q11Answer = 0;
+}
 
 Console.WriteLine(" ");
 Console.WriteLine("Question 12: What does Hospitality, kindness, generosity, support mean in Maori?");
@@ -211,6 +302,14 @@ if (q12 == "B")
 else
 {
     Console.WriteLine("This is incorrect, the answer is B");
+}
+if (q12 == "B")
+{
+    q12Answer = 1;
+}
+else
+{
+    q12Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -228,6 +327,14 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is B");
 }
+if (q13 == "A")
+{
+    q13Answer = 1;
+}
+else
+{
+    q13Answer = 0;
+}
 
 Console.WriteLine(" ");
 Console.WriteLine("Question 14: What is Toilet in Maori?");
@@ -243,6 +350,14 @@ if (q14 == "C")
 else
 {
     Console.WriteLine("This is incorrect, the answer is C");
+}
+if (q14 == "C")
+{
+    q14Answer = 1;
+}
+else
+{
+    q14Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -260,10 +375,18 @@ else
 {
     Console.WriteLine("This is incorrect, the answer is C");
 }
+if (q15 == "C")
+{
+    q15Answer = 1;
+}
+else
+{
+    q15Answer = 0;
+}
 
 Console.WriteLine(" ");
 Console.WriteLine("Well done you have finished the quiz!");
-Console.WriteLine("You got a score of:  ");
+Console.WriteLine("You got a score of: " + (q1Answer + q2Answer + q3Answer + q4Answer + q5Answer));
 Console.WriteLine(" ");
 Console.WriteLine("Would you like to try again and try get a better score?");
 string retry = (Console.ReadLine().ToUpper());
