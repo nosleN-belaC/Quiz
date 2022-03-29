@@ -1,23 +1,19 @@
 ﻿// This code asks you 10 multi choice questions about the Maori language
 
 int q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer, q7Answer, q8Answer, q9Answer, q10Answer, q11Answer, q12Answer, q13Answer, q14Answer, q15Answer;
-
+int score = 0;
 Console.WriteLine(" ");
 Console.WriteLine("This is a Te Reo Maori word and phrase quiz.");
 Console.WriteLine("If you enter any other character that is not a, b, or c you will be incorrect.");
 Console.WriteLine("There are 10 questions and you only have one shot at each one so make it count.");
 Console.WriteLine("The questions start off easy and get harder as the quiz goes on.\n");
-Console.WriteLine("Would you like to start with the harder questions?");
+/*Console.WriteLine("Would you like to start with the harder questions?");
 string q0 = (Console.ReadLine().ToUpper());
 if (q0 == "YES")
 {
-    goto harderQuestions;
+goto harderQuestions;
 }
-else
-{
-    goto quizStart;
-}
-
+*/
 quizStart:
 Console.WriteLine(" ");
 Console.WriteLine("Question 1: What is the Maori word for family?");
@@ -29,17 +25,12 @@ string q1 = (Console.ReadLine().ToUpper());
 if (q1 == "A")
 {
     Console.WriteLine("You are correct");
+    q1Answer = 1;
+    score = score + 1;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is A");
-}
-if (q1 == "A")
-{
-    q1Answer = 1;
-}
-else
-{
     q1Answer = 0;
 }
 
@@ -54,17 +45,12 @@ string q2 = (Console.ReadLine().ToUpper());
 if (q2 == "B")
 {
     Console.WriteLine("You are correct");
+    q2Answer = 1;
+    score = score + 1;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is B");
-}
-if (q2 == "B")
-{
-    q2Answer = 1;
-}
-else
-{
     q2Answer = 0;
 }
 
@@ -78,17 +64,12 @@ string q3 = (Console.ReadLine().ToUpper());
 if (q3 == "A")
 {
     Console.WriteLine("You are correct");
+    q3Answer = 1;
+    score = score + 1;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is A");
-}
-if (q3 == "A")
-{
-    q3Answer = 1;
-}
-else
-{
     q3Answer = 0;
 }
 
@@ -102,17 +83,12 @@ string q4 = (Console.ReadLine().ToUpper());
 if (q4 == "C")
 {
     Console.WriteLine("You are correct");
+    q4Answer = 1;
+    score = score + 1;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is C");
-}
-if (q4 == "C")
-{
-    q4Answer = 1;
-}
-else
-{
     q4Answer = 0;
 }
 
@@ -129,17 +105,12 @@ string q5 = (Console.ReadLine().ToUpper());
 if (q5 == "B")
 {
     Console.WriteLine("You are correct");
+    q5Answer = 1;
+    score = score + 1;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is B");
-}
-if (q5 == "B")
-{
-    q5Answer = 1;
-}
-else
-{
     q5Answer = 0;
 }
 
@@ -153,42 +124,33 @@ string q6 = (Console.ReadLine().ToUpper());
 if (q6 == "C")
 {
     Console.WriteLine("You are correct");
+    q6Answer = 1;
+    score = score + 1;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is C");
-}
-if (q6 == "C")
-{
-    q6Answer = 1;
-}
-else
-{
     q6Answer = 0;
 }
 
-harderQuestions:
+
 Console.WriteLine(" ");
 Console.WriteLine("Question 7: What is the Maori word for funeral");
 Console.WriteLine("A: Taonga");
 Console.WriteLine("B: Tangi");
 Console.WriteLine("C: Tāne");
 
+//harderQuestions:
 string q7 = (Console.ReadLine().ToUpper());
 if (q7 == "B")
 {
     Console.WriteLine("You are correct");
+    q7Answer = 1;
+    score = score + 1;
 }
 else
 {
     Console.WriteLine("This is incorrect");
-}
-if (q7 == "B")
-{
-    q7Answer = 1;
-}
-else
-{
     q7Answer = 0;
 }
 
@@ -202,17 +164,12 @@ string q8 = (Console.ReadLine().ToUpper());
 if (q8 == "B")
 {
     Console.WriteLine("You are correct");
+    q8Answer = 1;
+    score = score + 1;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is B");
-}
-if (q8 == "B")
-{
-    q8Answer = 1;
-}
-else
-{
     q8Answer = 0;
 }
 
@@ -226,17 +183,12 @@ string q9 = (Console.ReadLine().ToUpper());
 if (q9 == "B")
 {
     Console.WriteLine("You are correct");
+    q9Answer = 1;
+    score = score + 1;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is B");
-}
-if (q9 == "B")
-{
-    q9Answer = 1;
-}
-else
-{
     q9Answer = 0;
 }
 
@@ -250,17 +202,12 @@ string q10 = (Console.ReadLine().ToUpper());
 if (q10 == "C")
 {
     Console.WriteLine("You are correct");
+    q10Answer = 1;
+    score = score + 1;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is C");
-}
-if (q10 == "C")
-{
-    q10Answer = 1;
-}
-else
-{
     q10Answer = 0;
 }
 
@@ -274,18 +221,14 @@ string q11 = (Console.ReadLine().ToUpper());
 if (q11 == "A")
 {
     Console.WriteLine("You are correct");
+    q11Answer = 1;
+    score = score + 1;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is A");
-}
-if (q11 == "A")
-{
-    q11Answer = 1;
-}
-else
-{
     q11Answer = 0;
+ 
 }
 
 Console.WriteLine(" ");
@@ -298,17 +241,12 @@ string q12 = (Console.ReadLine().ToUpper());
 if (q12 == "B")
 {
     Console.WriteLine("You are correct");
+    q12Answer = 1;
+    score = score + 1;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is B");
-}
-if (q12 == "B")
-{
-    q12Answer = 1;
-}
-else
-{
     q12Answer = 0;
 }
 
@@ -322,17 +260,12 @@ string q13 = (Console.ReadLine().ToUpper());
 if (q13 == "A")
 {
     Console.WriteLine("You are correct");
+    q13Answer = 1;
+    score = score + 1;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is B");
-}
-if (q13 == "A")
-{
-    q13Answer = 1;
-}
-else
-{
     q13Answer = 0;
 }
 
@@ -346,17 +279,12 @@ string q14 = (Console.ReadLine().ToUpper());
 if (q14 == "C")
 {
     Console.WriteLine("You are correct");
+    q14Answer = 1;
+    score = score + 1;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is C");
-}
-if (q14 == "C")
-{
-    q14Answer = 1;
-}
-else
-{
     q14Answer = 0;
 }
 
@@ -370,27 +298,23 @@ string q15 = (Console.ReadLine().ToUpper());
 if (q15 == "C")
 {
     Console.WriteLine("You are correct");
+    q15Answer = 1;
+    score = score + 1;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is C");
-}
-if (q15 == "C")
-{
-    q15Answer = 1;
-}
-else
-{
     q15Answer = 0;
 }
 
 Console.WriteLine(" ");
 Console.WriteLine("Well done you have finished the quiz!");
-Console.WriteLine("You got a score of: " + (q1Answer + q2Answer + q3Answer + q4Answer + q5Answer));
+Console.WriteLine("You got a score of: " + (q15Answer + q14Answer + q13Answer + q12Answer + q11Answer + q10Answer + q9Answer + q8Answer + q7Answer + q6Answer + q5Answer + q4Answer + q3Answer + q2Answer + q1Answer));
+Console.WriteLine("Test: " + score);
 Console.WriteLine(" ");
-Console.WriteLine("Would you like to try again and try get a better score?");
+Console.WriteLine("Would you like to try again and try get a better score? \n[YES]/[NO]");
 string retry = (Console.ReadLine().ToUpper());
-if (retry == "Yes")
+if (retry == "YES")
 {
     goto quizStart;
 }
