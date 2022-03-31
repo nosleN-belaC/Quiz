@@ -8,14 +8,18 @@ Console.WriteLine("This is a Te Reo Maori word and phrase quiz.");
 Console.WriteLine("If you enter any other character that is not a, b, or c you will be incorrect.");
 Console.WriteLine("There are 15 questions and you only have one shot at each one so make it count.");
 Console.WriteLine("The questions start off easy and get harder as the quiz goes on.\n");
-Console.WriteLine("Would you rather start with the harder Maori phrases?\n[YES]/[NO]");
+Console.WriteLine("Would you rather start with the harder Maori phrases quiz (Level 2)?\n[YES]/[NO]");
 string startLevel2 = Console.ReadLine().ToUpper();
 if (startLevel2 == "YES")
 {
     goto level2;
 }
+else
+{
+    goto quizStart;
+}
 quizStart:
-Console.WriteLine("Press enter to start");
+Console.WriteLine("Press enter to start level 1");
 string q0 = (Console.ReadLine().ToUpper());
 if (q0 == " ")
 {
@@ -124,6 +128,7 @@ else
     q5Answer = 0;
 }
 
+Console.Clear();
 Console.WriteLine(" ");
 Console.WriteLine("Question 6: What is the Maori word for children");
 Console.WriteLine("A: Waiata");
@@ -215,6 +220,7 @@ else
     q10Answer = 0;
 }
 
+Console.Clear();
 Console.WriteLine(" ");
 Console.WriteLine("Question 11: What does Hei āpōpō mean in English?");
 Console.WriteLine("A: See you tomorrow");
@@ -306,20 +312,32 @@ else
     q15Answer = 0;
 }
 
+Console.Clear();
 Console.WriteLine(" ");
-Console.WriteLine("Well done you have finished the quiz!");
+Console.WriteLine("Well done you have finished level 1!");
 Console.WriteLine("You got a score of: " + (q15Answer + q14Answer + q13Answer + q12Answer + q11Answer + q10Answer + q9Answer + q8Answer + q7Answer + q6Answer + q5Answer + q4Answer + q3Answer + q2Answer + q1Answer));
 Console.WriteLine(" ");
-Console.WriteLine("Would you like to try again and try get a better score? \n[YES]/[NO]");
+Console.WriteLine("Would you like to try level 1 again and try get a better score? \n[YES]/[NO]");
 string retry = (Console.ReadLine().ToUpper());
 if (retry == "YES")
 {
     goto quizStart;
 }
-else
+else if (retry == "NO")
 {
     Console.WriteLine(" ");
-    Console.WriteLine("Have a nice day!.");
+    Console.WriteLine("Would you like to try level 2?\n[YES]/[NO]");
 }
-
+string level2Start = (Console.ReadLine().ToUpper());
+if (level2Start == "YES")
+{
+    goto level2;
+}
+else
+{
+    Console.WriteLine("Have a nice day!");
+}
 level2:
+Console.Clear();
+Console.WriteLine("Level 2 begins here\n");
+Console.WriteLine("");
