@@ -1,6 +1,7 @@
 ﻿// This code asks you 15 multi choice questions about the Maori language
 
 int q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer, q7Answer, q8Answer, q9Answer, q10Answer, q11Answer, q12Answer, q13Answer, q14Answer, q15Answer;
+int q16Answer, q17Answer, q18Answer, q19Answer, q20Answer;
 
 //Intro to quiz:
 Console.WriteLine(" ");
@@ -8,7 +9,7 @@ Console.WriteLine("This is a Te Reo Maori word and phrase quiz.");
 Console.WriteLine("If you enter any other character that is not a, b, or c you will be incorrect.");
 Console.WriteLine("There are 15 questions and you only have one shot at each one so make it count.");
 Console.WriteLine("The questions start off easy and get harder as the quiz goes on.\n");
-Console.WriteLine("Would you rather start with the harder Maori phrases quiz (Level 2)?\n[YES]/[NO]");
+Console.WriteLine("Would you rather start with the harder Maori quiz (Level 2)?\n[YES]/[NO]");
 string startLevel2 = Console.ReadLine().ToUpper();
 if (startLevel2 == "YES")
 {
@@ -20,8 +21,8 @@ else
 }
 quizStart:
 Console.WriteLine("Press enter to start level 1");
-string q0 = (Console.ReadLine().ToUpper());
-if (q0 == " ")
+string enterStart = (Console.ReadLine().ToUpper());
+if (enterStart == " ")
 {
     Console.WriteLine("Goodluck!");
 }
@@ -31,6 +32,7 @@ else
 }
 
 //Question 1 starts here
+Console.Clear();
 Console.WriteLine(" ");
 Console.WriteLine("Question 1: What is the Maori word for family?");
 Console.WriteLine("A: Whanau");
@@ -341,3 +343,39 @@ level2:
 Console.Clear();
 Console.WriteLine("Level 2 begins here\n");
 Console.WriteLine("");
+Console.WriteLine("This level consists of Maori sentances and you have to translate them to English.");
+Console.WriteLine("Press enter to begin level 2:");
+string enterStart2 = (Console.ReadLine().ToUpper());
+if (enterStart2 == " ")
+{
+    Console.WriteLine("Goodluck!");
+}
+else
+{
+    Console.WriteLine("Goodluck!");
+}
+
+Console.Clear();
+Console.WriteLine(" ");
+Console.WriteLine("Question 1: What does Haere mai ki konei mean in English?");
+Console.WriteLine("A: Come over here");
+Console.WriteLine("B: How are you");
+Console.WriteLine("C: What are you doing");
+
+string q16 = (Console.ReadLine().ToUpper());
+if (q16 == "A")
+{
+    Console.WriteLine("You are correct");
+    q16Answer = 1;
+}
+else
+{
+    Console.WriteLine("This is incorrect, the answer is C");
+    q16Answer = 0;
+}
+
+Console.WriteLine(" ");
+Console.WriteLine("Question 2: What does Tēnā homai he kapu tī mean?");
+Console.WriteLine("A: ");
+Console.WriteLine("B: Where are ");
+Console.WriteLine("C: Please provide a cup of tea");
