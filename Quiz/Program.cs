@@ -1,7 +1,6 @@
 ﻿// This code asks you 15 multi choice questions about the Maori language
 
 int q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer, q7Answer, q8Answer, q9Answer, q10Answer, q11Answer, q12Answer, q13Answer, q14Answer, q15Answer;
-int q16Answer, q17Answer, q18Answer, q19Answer, q20Answer;
 
 //Intro to quiz:
 Console.WriteLine(" ");
@@ -355,6 +354,8 @@ else
     Console.WriteLine("Goodluck!");
 }
 
+int q16Answer, q17Answer, q18Answer, q19Answer, q20Answer;
+
 Console.Clear();
 Console.WriteLine(" ");
 Console.WriteLine("Question 1: What does Haere mai ki konei mean in English?");
@@ -370,12 +371,46 @@ if (q16 == "A")
 }
 else
 {
-    Console.WriteLine("This is incorrect, the answer is C");
+    Console.WriteLine("This is incorrect, the answer is A");
     q16Answer = 0;
 }
 
 Console.WriteLine(" ");
 Console.WriteLine("Question 2: What does Tēnā homai he kapu tī mean?");
-Console.WriteLine("A: ");
-Console.WriteLine("B: Where are ");
+Console.WriteLine("A: Can I have some food please?");
+Console.WriteLine("B: Where are you going?");
 Console.WriteLine("C: Please provide a cup of tea");
+
+string q17 = (Console.ReadLine().ToUpper());
+if (q17 == "C")
+{
+    Console.WriteLine("You are correct");
+    q17Answer = 1;
+}
+else
+{
+    Console.WriteLine("This is incorrect, the answer C");
+    q17Answer = 0;
+}
+
+Console.WriteLine(" ");
+Console.WriteLine("Question 3: What does Me haere tāua ki te tina mean in English?");
+Console.WriteLine("A: Shall I meet you (one person) for lunch?");
+Console.WriteLine("B: Meet me at the Library");
+Console.WriteLine("C: Would like a water?");
+
+string q18 = (Console.ReadLine().ToUpper());
+if (q18 == "A")
+{
+    Console.WriteLine("You are correct");
+    q18Answer = 1;
+}
+else
+{
+    Console.WriteLine("This is incorrect, the answer is A");
+    q18Answer=0;
+}
+
+Console.WriteLine(" ");
+Console.WriteLine("Question 4: What does");
+Console.WriteLine("A:")
