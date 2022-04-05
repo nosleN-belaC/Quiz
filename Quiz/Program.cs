@@ -1,4 +1,5 @@
-﻿// This code asks you 15 multi choice questions about the Maori language
+﻿/* This code is 2 levels of a multipul choice Maori quiz, the first having 15 questions with them getting harder as
+quiz goes on. The second level is a 5 Maori sentence based multipul choice question quiz */
 
 int q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer, q7Answer, q8Answer, q9Answer, q10Answer, q11Answer, q12Answer, q13Answer, q14Answer, q15Answer;
 
@@ -6,18 +7,26 @@ int q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer, q7Answer, q8Answ
 Console.WriteLine(" ");
 Console.WriteLine("This is a Te Reo Maori word and phrase quiz.");
 Console.WriteLine("If you enter any other character that is not a, b, or c you will be incorrect.");
-Console.WriteLine("There are 15 questions and you only have one shot at each one so make it count.");
-Console.WriteLine("The questions start off easy and get harder as the quiz goes on.\n");
+Console.WriteLine("There are 2 levels, 15 in level 1 and 5 in level 2.");
+Console.WriteLine("The questions in level 1 start off easy and get harder as the quiz goes on.");
+Console.WriteLine("Level 2 is mainly about Maori sentances.\n");
+level2Check:
 Console.WriteLine("Would you rather start with the harder Maori quiz (Level 2)?\n[YES]/[NO]");
 string startLevel2 = Console.ReadLine().ToUpper();
 if (startLevel2 == "YES")
 {
     goto level2;
 }
-else
+else if (startLevel2 == "NO")
 {
     goto quizStart;
 }
+else
+{
+    Console.WriteLine("This input is invaild, try again!");
+    goto level2Check;
+}
+
 quizStart:
 Console.WriteLine("Press enter to start level 1");
 string enterStart = (Console.ReadLine().ToUpper());
@@ -110,7 +119,9 @@ else
 
 Console.WriteLine(" ");
 Console.WriteLine("Now the questions are going to get harder, good luck.");
+// This is when the questions generally start to get a bit harder.
 
+//Question 5 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 5: What is the Maori phrase for Welcome");
 Console.WriteLine("A: Tēnā koe");
@@ -129,7 +140,7 @@ else
     q5Answer = 0;
 }
 
-Console.Clear();
+//Question 6 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 6: What is the Maori word for children");
 Console.WriteLine("A: Waiata");
@@ -148,7 +159,7 @@ else
     q6Answer = 0;
 }
 
-
+//Question 7 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 7: What is the Maori word for funeral");
 Console.WriteLine("A: Taonga");
@@ -167,6 +178,7 @@ else
     q7Answer = 0;
 }
 
+//Question 8 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 8: What is the Maori word for elder");
 Console.WriteLine("A: Manuhiri");
@@ -185,6 +197,7 @@ else
     q8Answer = 0;
 }
 
+//Question 9 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 9: What is the name for a Maori chief?");
 Console.WriteLine("A: Whare whakairo");
@@ -203,6 +216,7 @@ else
     q9Answer = 0;
 }
 
+//Question 10 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 10: What does Manuhiri mean in English?");
 Console.WriteLine("A: Greenstone");
@@ -221,7 +235,7 @@ else
     q10Answer = 0;
 }
 
-Console.Clear();
+//Question 11 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 11: What does Hei āpōpō mean in English?");
 Console.WriteLine("A: See you tomorrow");
@@ -241,6 +255,7 @@ else
  
 }
 
+//Question 12 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 12: What does Hospitality, kindness, generosity, support mean in Maori?");
 Console.WriteLine("A: Waiata");
@@ -259,6 +274,7 @@ else
     q12Answer = 0;
 }
 
+//Question 13 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 13: What does Whanaungatanga mean in English?");
 Console.WriteLine("A: Relationship, kinship, sense of family connection");
@@ -277,6 +293,7 @@ else
     q13Answer = 0;
 }
 
+//Question 14 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 14: What is Toilet in Maori?");
 Console.WriteLine("A: Rohe");
@@ -295,6 +312,7 @@ else
     q14Answer = 0;
 }
 
+//Question 15 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 15: What does Tūrangawaewae mean in English?");
 Console.WriteLine("A: Fostered or adopted child");
@@ -316,8 +334,12 @@ else
 Console.Clear();
 Console.WriteLine(" ");
 Console.WriteLine("Well done you have finished level 1!");
+// The bit of code underneath this comment adds all the scores from questions 1-15 and displays them as a number out of 15.
 Console.WriteLine("You got a score of: " + (q15Answer + q14Answer + q13Answer + q12Answer + q11Answer + q10Answer + q9Answer + q8Answer + q7Answer + q6Answer + q5Answer + q4Answer + q3Answer + q2Answer + q1Answer));
 Console.WriteLine(" ");
+/*The code underneath asks the user if they would like to retry level 1 and try get a better score.
+ If they say no they are asked if they would like to start level 2, if they still say no it will exit the quiz.7*/
+level1Check:
 Console.WriteLine("Would you like to try level 1 again and try get a better score? \n[YES]/[NO]");
 string retry = (Console.ReadLine().ToUpper());
 if (retry == "YES")
@@ -326,19 +348,32 @@ if (retry == "YES")
 }
 else if (retry == "NO")
 {
-    Console.WriteLine(" ");
+    Console.WriteLine(" ");    
     Console.WriteLine("Would you like to try level 2?\n[YES]/[NO]");
+}
+else
+{
+    Console.WriteLine("This input is invalid, try again!");
+    goto level1Check;
 }
 string level2Start = (Console.ReadLine().ToUpper());
 if (level2Start == "YES")
 {
     goto level2;
 }
+else if (level2Start == "NO")
+{
+    goto quizEnd;
+}
 else
 {
-    Console.WriteLine("Have a nice day!");
+    Console.WriteLine("This input is invalid, try again!");
+    goto level1Check;
 }
+
 level2:
+
+// THis is where level 2 begins
 Console.Clear();
 Console.WriteLine("Level 2 begins here\n");
 Console.WriteLine("");
@@ -412,5 +447,79 @@ else
 }
 
 Console.WriteLine(" ");
-Console.WriteLine("Question 4: What does");
-Console.WriteLine("A:")
+Console.WriteLine("Question 4: What does Āe, taihoa ake nei mean?");
+Console.WriteLine("A: Where are you?");
+Console.WriteLine("B: Yes, one moment please");
+Console.WriteLine("C: Wait a minute");
+
+string q19 = (Console.ReadLine().ToUpper());
+if (q19 == "B")
+{
+    Console.WriteLine("You are correct");
+    q19Answer = 1;
+}
+else
+{
+    Console.WriteLine("This is incorrect, the answer is B");
+    q19Answer = 0;
+}
+
+Console.WriteLine(" ");
+Console.WriteLine("Question 5: What does Me hui tahi tāua mean?");
+Console.WriteLine("A: My computer is broken");
+Console.WriteLine("B: The internet is slow today");
+Console.WriteLine("C: I would like to meet with you");
+
+string q20 = (Console.ReadLine().ToUpper());
+if (q20 == "")
+{
+    Console.WriteLine("You are correct");
+    q20Answer = 1;
+}
+else
+{
+    Console.WriteLine("This is incorrect, the answer is C");
+    q20Answer = 0;
+}
+
+Console.Clear();
+Console.WriteLine(" ");
+Console.WriteLine("Well done you have finished level 2!");
+// The line underneath also adds the scores from question 1-5 in level 2 and displays them as a number.
+Console.WriteLine("You got a score of: " + (q16Answer + q17Answer + q18Answer + q19Answer + q20Answer));
+Console.WriteLine(" ");
+// The code underneath asks you if you would like to retry level 2 or retry the whole quiz again.
+retryLevel2:
+Console.WriteLine("Would you like to try level 2 again and try get a better score? \n[YES]/[NO]");
+
+string  retryL2= (Console.ReadLine().ToUpper());
+if (retryL2== "YES")
+{
+goto level2;
+}
+else if (retryL2 == "NO")
+{
+Console.WriteLine(" ");
+Console.WriteLine("Would you like to try restart the whole quiz?\n[YES]/[NO]");
+}
+else
+{
+    Console.WriteLine("This input is invalid, try again!");
+    goto retryLevel2;
+}
+
+string retryQuiz = (Console.ReadLine().ToUpper());
+if (retryQuiz == "YES")
+{
+goto quizStart;
+}
+// fix else
+else
+{
+goto quizEnd;
+}
+
+quizEnd:
+Console.Clear();
+Console.WriteLine("Have a nice day!");
+// This is the end of the quiz.
