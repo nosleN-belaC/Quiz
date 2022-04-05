@@ -1,12 +1,35 @@
 ﻿/* This code is 2 levels of a multipul choice Maori quiz, the first having 15 questions with them getting harder as
 quiz goes on. The second level is a 5 Maori sentence based multipul choice question quiz */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 int q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer, q7Answer, q8Answer, q9Answer, q10Answer, q11Answer, q12Answer, q13Answer, q14Answer, q15Answer;
+
+static void correctAnswer() // This shows when the user gets a question right. I did this so I dont have to type as much.
+{
+    Console.WriteLine("You are correct, welldone!");
+}
+
+static void invalidInput() // This gets shown when the user inputs a invalid letter or word when answering some questions. Also did this so I dont have to type as much.
+{
+    Console.WriteLine("This input is invalid, try again!");
+}
 
 //Intro to quiz:
 Console.WriteLine(" ");
 Console.WriteLine("This is a Te Reo Maori word and phrase quiz.");
-Console.WriteLine("If you enter any other character that is not a, b, or c you will be incorrect.");
+Console.WriteLine("Please enter A,B, or C when answering the questions.");
 Console.WriteLine("There are 2 levels, 15 in level 1 and 5 in level 2.");
 Console.WriteLine("The questions in level 1 start off easy and get harder as the quiz goes on.");
 Console.WriteLine("Level 2 is mainly about Maori sentances.\n");
@@ -23,7 +46,7 @@ else if (startLevel2 == "NO")
 }
 else
 {
-    Console.WriteLine("This input is invaild, try again!");
+    invalidInput();
     goto level2Check;
 }
 
@@ -39,7 +62,6 @@ else
     Console.WriteLine("Goodluck!");
 }
 
-//Question 1 starts here
 Console.Clear();
 Console.WriteLine(" ");
 Console.WriteLine("Question 1: What is the Maori word for family?");
@@ -50,7 +72,7 @@ Console.WriteLine("C: Haka");
 string q1 = (Console.ReadLine().ToUpper());
 if (q1 == "A")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q1Answer = 1;
 }
 else
@@ -59,7 +81,6 @@ else
     q1Answer = 0;
 }
 
-//Question 2 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 2: What is the Maori word for Love?");
 Console.WriteLine("A: Awa");
@@ -70,7 +91,7 @@ string q2 = (Console.ReadLine().ToUpper());
 
 if (q2 == "B")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q2Answer = 1;
 }
 else
@@ -79,7 +100,6 @@ else
     q2Answer = 0;
 }
 
-//Question 3 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 3: What is the Maori word for Work?");
 Console.WriteLine("A: Mahi ");
@@ -89,7 +109,7 @@ Console.WriteLine("C: Marae");
 string q3 = (Console.ReadLine().ToUpper());
 if (q3 == "A")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q3Answer = 1;
 }
 else
@@ -98,7 +118,6 @@ else
     q3Answer = 0;
 }
 
-//Question 4 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 4: What is Maori for the word Hello?");
 Console.WriteLine("A: Mōrena");
@@ -108,7 +127,7 @@ Console.WriteLine("C: Kia ora");
 string q4 = (Console.ReadLine().ToUpper());
 if (q4 == "C")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q4Answer = 1;
 }
 else
@@ -121,7 +140,6 @@ Console.WriteLine(" ");
 Console.WriteLine("Now the questions are going to get harder, good luck.");
 // This is when the questions generally start to get a bit harder.
 
-//Question 5 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 5: What is the Maori phrase for Welcome");
 Console.WriteLine("A: Tēnā koe");
@@ -131,7 +149,7 @@ Console.WriteLine("C: E noho");
 string q5 = (Console.ReadLine().ToUpper());
 if (q5 == "B")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q5Answer = 1;
 }
 else
@@ -140,7 +158,6 @@ else
     q5Answer = 0;
 }
 
-//Question 6 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 6: What is the Maori word for children");
 Console.WriteLine("A: Waiata");
@@ -150,7 +167,7 @@ Console.WriteLine("C: Tamariki ");
 string q6 = (Console.ReadLine().ToUpper());
 if (q6 == "C")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q6Answer = 1;
 }
 else
@@ -159,7 +176,6 @@ else
     q6Answer = 0;
 }
 
-//Question 7 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 7: What is the Maori word for funeral");
 Console.WriteLine("A: Taonga");
@@ -169,16 +185,15 @@ Console.WriteLine("C: Tāne");
 string q7 = (Console.ReadLine().ToUpper());
 if (q7 == "B")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q7Answer = 1;
 }
 else
 {
-    Console.WriteLine("This is incorrect");
+    Console.WriteLine("This is incorrect, the answer is B");
     q7Answer = 0;
 }
 
-//Question 8 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 8: What is the Maori word for elder");
 Console.WriteLine("A: Manuhiri");
@@ -188,7 +203,7 @@ Console.WriteLine("C: Whenua");
 string q8 = (Console.ReadLine().ToUpper());
 if (q8 == "B")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q8Answer = 1;
 }
 else
@@ -197,7 +212,6 @@ else
     q8Answer = 0;
 }
 
-//Question 9 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 9: What is the name for a Maori chief?");
 Console.WriteLine("A: Whare whakairo");
@@ -207,7 +221,7 @@ Console.WriteLine("C: Whanaunga");
 string q9 = (Console.ReadLine().ToUpper());
 if (q9 == "B")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q9Answer = 1;
 }
 else
@@ -216,7 +230,6 @@ else
     q9Answer = 0;
 }
 
-//Question 10 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 10: What does Manuhiri mean in English?");
 Console.WriteLine("A: Greenstone");
@@ -226,7 +239,7 @@ Console.WriteLine("C: Guests");
 string q10 = (Console.ReadLine().ToUpper());
 if (q10 == "C")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q10Answer = 1;
 }
 else
@@ -235,7 +248,6 @@ else
     q10Answer = 0;
 }
 
-//Question 11 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 11: What does Hei āpōpō mean in English?");
 Console.WriteLine("A: See you tomorrow");
@@ -245,7 +257,7 @@ Console.WriteLine("C: Regards");
 string q11 = (Console.ReadLine().ToUpper());
 if (q11 == "A")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q11Answer = 1;
 }
 else
@@ -255,7 +267,6 @@ else
  
 }
 
-//Question 12 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 12: What does Hospitality, kindness, generosity, support mean in Maori?");
 Console.WriteLine("A: Waiata");
@@ -265,7 +276,7 @@ Console.WriteLine("C: Kaikōrero");
 string q12 = (Console.ReadLine().ToUpper());
 if (q12 == "B")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q12Answer = 1;
 }
 else
@@ -274,7 +285,6 @@ else
     q12Answer = 0;
 }
 
-//Question 13 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 13: What does Whanaungatanga mean in English?");
 Console.WriteLine("A: Relationship, kinship, sense of family connection");
@@ -284,7 +294,7 @@ Console.WriteLine("C: Confiscate, take by force");
 string q13 = (Console.ReadLine().ToUpper());
 if (q13 == "A")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q13Answer = 1;
 }
 else
@@ -293,7 +303,6 @@ else
     q13Answer = 0;
 }
 
-//Question 14 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 14: What is Toilet in Maori?");
 Console.WriteLine("A: Rohe");
@@ -303,7 +312,7 @@ Console.WriteLine("C: Whare paku");
 string q14 = (Console.ReadLine().ToUpper());
 if (q14 == "C")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q14Answer = 1;
 }
 else
@@ -312,7 +321,6 @@ else
     q14Answer = 0;
 }
 
-//Question 15 starts here
 Console.WriteLine(" ");
 Console.WriteLine("Question 15: What does Tūrangawaewae mean in English?");
 Console.WriteLine("A: Fostered or adopted child");
@@ -322,7 +330,7 @@ Console.WriteLine("C: A place to stand, a place to belong to, a seat or location
 string q15 = (Console.ReadLine().ToUpper());
 if (q15 == "C")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q15Answer = 1;
 }
 else
@@ -353,7 +361,7 @@ else if (retry == "NO")
 }
 else
 {
-    Console.WriteLine("This input is invalid, try again!");
+    invalidInput();
     goto level1Check;
 }
 string level2Start = (Console.ReadLine().ToUpper());
@@ -367,13 +375,13 @@ else if (level2Start == "NO")
 }
 else
 {
-    Console.WriteLine("This input is invalid, try again!");
+    invalidInput();
     goto level1Check;
 }
 
 level2:
 
-// THis is where level 2 begins
+// This is where level 2 begins
 Console.Clear();
 Console.WriteLine("Level 2 begins here\n");
 Console.WriteLine("");
@@ -401,7 +409,7 @@ Console.WriteLine("C: What are you doing");
 string q16 = (Console.ReadLine().ToUpper());
 if (q16 == "A")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q16Answer = 1;
 }
 else
@@ -419,7 +427,7 @@ Console.WriteLine("C: Please provide a cup of tea");
 string q17 = (Console.ReadLine().ToUpper());
 if (q17 == "C")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q17Answer = 1;
 }
 else
@@ -437,7 +445,7 @@ Console.WriteLine("C: Would like a water?");
 string q18 = (Console.ReadLine().ToUpper());
 if (q18 == "A")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q18Answer = 1;
 }
 else
@@ -455,7 +463,7 @@ Console.WriteLine("C: Wait a minute");
 string q19 = (Console.ReadLine().ToUpper());
 if (q19 == "B")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q19Answer = 1;
 }
 else
@@ -473,7 +481,7 @@ Console.WriteLine("C: I would like to meet with you");
 string q20 = (Console.ReadLine().ToUpper());
 if (q20 == "")
 {
-    Console.WriteLine("You are correct");
+    correctAnswer();
     q20Answer = 1;
 }
 else
@@ -504,7 +512,7 @@ Console.WriteLine("Would you like to try restart the whole quiz?\n[YES]/[NO]");
 }
 else
 {
-    Console.WriteLine("This input is invalid, try again!");
+    invalidInput();
     goto retryLevel2;
 }
 
@@ -513,11 +521,17 @@ if (retryQuiz == "YES")
 {
 goto quizStart;
 }
-// fix else
+
+else if (retryQuiz == "NO")
+{
+    goto quizEnd;
+}
 else
 {
-goto quizEnd;
+    invalidInput();
+    goto retryLevel2;
 }
+
 
 quizEnd:
 Console.Clear();
