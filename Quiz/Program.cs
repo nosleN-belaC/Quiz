@@ -52,7 +52,7 @@ int q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer, q7Answer, q8Answ
 
 static void correctAnswer() // This shows when the user gets a question right. I did this so I dont have to type as much.
 {
-    Console.WriteLine("You are correct, welldone!");
+    Console.WriteLine("You are correct, well done!");
 }
 
 static void invalidInput() // This gets shown when the user inputs a invalid letter or word when answering some questions. Also did this so I dont have to type as much.
