@@ -1,17 +1,51 @@
 ﻿/* This code is 2 levels of a multipul choice Maori quiz, the first having 15 questions with them getting harder as
 quiz goes on. The second level is a 5 Maori sentence based multipul choice question quiz */
 
+/*
+Code starts
 
+Decleared int q1Answer - q15Answer
+Decleared 2 user-defined methods, 1 for if you get a question wrong and 1 if an input is invalid
 
+-Intro to quiz-
 
+It asks you if you would like to start with level 2, if yes it goes to level 2, if no it continues with level 1.
+It then asks you to press enter to start.
 
+Question 1, if answer wrong it makes q1Answer have a value of 0 and it says what the correct answer is and moves on. 
+But if it is correct it makes q1Answer have a value of 1 and then moves onto next question.
 
+Question 2, if answer wrong it makes q1Answer have a value of 0 and it says what the correct answer is and moves on. 
+But if it is correct it makes q2Answer have a value of 1 and then moves onto next question.
 
+What happens to question 1 and 2 happen to every question up until question 15.
 
+The code then tells you that you finished level 1 and it says your score by adding up all the variables.(score out of 15)
 
+It then asks you if you would like to restart level 1, if yes then it goes to the start, if no then it moves onto level 2
 
+Decleared int q16Answer - q20Answer
 
+-Intro to level 2-
 
+It then asks you to press enter to start level 2
+
+Question 1, if answer wrong it makes q16Answer have a value of 0 and it says what the correct answer is and moves on. 
+But if it is correct it makes q16Answer have a value of 1 and then moves onto next question.
+
+Question 2, if answer wrong it makes q17Answer have a value of 0 and it says what the correct answer is and moves on. 
+But if it is correct it makes q17Answer have a value of 1 and then moves onto next question.
+
+This happens for the rest of the questions up to question 5.
+
+The code then tells you that you finished level 1 and it says your score by adding up all the variables.(score out of 5)
+
+It the asks you if you would like to retry level 2 to get a better score, if yes it goes to the start of level 2.
+If no it asks you if you would like to retry the whole quiz, if yes it goes to the begining.
+If no again it says "Have a nice day"
+
+Code ends
+*/
 
 
 int q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer, q7Answer, q8Answer, q9Answer, q10Answer, q11Answer, q12Answer, q13Answer, q14Answer, q15Answer;
@@ -29,7 +63,7 @@ static void invalidInput() // This gets shown when the user inputs a invalid let
 //Intro to quiz:
 Console.WriteLine(" ");
 Console.WriteLine("This is a Te Reo Maori word and phrase quiz.");
-Console.WriteLine("Please enter A,B, or C when answering the questions.");
+Console.WriteLine("Please enter A,B, or C when answering the questions otherwise you will be wrong.");
 Console.WriteLine("There are 2 levels, 15 in level 1 and 5 in level 2.");
 Console.WriteLine("The questions in level 1 start off easy and get harder as the quiz goes on.");
 Console.WriteLine("Level 2 is mainly about Maori sentances.\n");
@@ -490,12 +524,14 @@ else
     q20Answer = 0;
 }
 
+
+int level2Score = (q16Answer + q17Answer + q18Answer + q19Answer + q20Answer);
 Console.Clear();
 Console.WriteLine(" ");
 Console.WriteLine("Well done you have finished level 2!");
-// The line underneath also adds the scores from question 1-5 in level 2 and displays them as a number.
-Console.WriteLine("You got a score of: " + (q16Answer + q17Answer + q18Answer + q19Answer + q20Answer));
+Console.WriteLine("You got a score of: " + (level2Score) + "out of 5");
 Console.WriteLine(" ");
+
 // The code underneath asks you if you would like to retry level 2 or retry the whole quiz again.
 retryLevel2:
 Console.WriteLine("Would you like to try level 2 again and try get a better score? \n[YES]/[NO]");
