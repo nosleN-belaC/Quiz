@@ -1,11 +1,10 @@
-﻿/* This code is 2 levels of a multipul choice Maori quiz, the first having 15 questions with them getting harder as
+﻿// Quiz made by Caleb Nelson
+
+/* This code is 2 levels of a multipul choice Maori quiz, the first having 15 questions with them getting harder as
 quiz goes on. The second level is a 5 Maori sentence based multipul choice question quiz */
 
 /*
 Code starts
-
-Decleared int q1Answer - q15Answer
-Decleared 2 user-defined methods, 1 for if you get a question wrong and 1 if an input is invalid
 
 -Intro to quiz-
 
@@ -38,7 +37,7 @@ But if it is correct it makes q17Answer have a value of 1 and then moves onto ne
 
 This happens for the rest of the questions up to question 5.
 
-The code then tells you that you finished level 1 and it says your score by adding up all the variables.(score out of 5)
+The code then tells you that you finished level 2 and it says your score by adding up all the variables.(score out of 5)
 
 It the asks you if you would like to retry level 2 to get a better score, if yes it goes to the start of level 2.
 If no it asks you if you would like to retry the whole quiz, if yes it goes to the begining.
@@ -47,8 +46,6 @@ If no again it says "Have a nice day"
 Code ends
 */
 
-
-int q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer, q7Answer, q8Answer, q9Answer, q10Answer, q11Answer, q12Answer, q13Answer, q14Answer, q15Answer;
 
 static void correctAnswer() // This shows when the user gets a question right. I did this so I dont have to type as much.
 {
@@ -62,8 +59,8 @@ static void invalidInput() // This gets shown when the user inputs a invalid let
 
 //Intro to quiz:
 Console.WriteLine(" ");
-Console.WriteLine("This is a Te Reo Maori word and phrase quiz.");
-Console.WriteLine("Please enter A,B, or C when answering the questions otherwise you will be wrong.");
+Console.WriteLine("This is a multi level Te Reo Maori word and phrase quiz.");
+Console.WriteLine("Please enter A, B or C when answering the questions otherwise you will be wrong.");
 Console.WriteLine("There are 2 levels, 15 in level 1 and 5 in level 2.");
 Console.WriteLine("The questions in level 1 start off easy and get harder as the quiz goes on.");
 Console.WriteLine("Level 2 is mainly about Maori sentances.\n");
@@ -85,6 +82,7 @@ else
 }
 
 quizStart:
+int score = 0;
 Console.WriteLine("Press enter to start level 1");
 string enterStart = (Console.ReadLine().ToUpper());
 if (enterStart == " ")
@@ -97,6 +95,7 @@ else
 }
 
 Console.Clear();
+Console.WriteLine("Goodluck!");
 Console.WriteLine(" ");
 Console.WriteLine("Question 1: What is the Maori word for family?");
 Console.WriteLine("A: Whanau");
@@ -107,12 +106,11 @@ string q1 = (Console.ReadLine().ToUpper());
 if (q1 == "A")
 {
     correctAnswer();
-    q1Answer = 1;
+    score++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is A");
-    q1Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -126,12 +124,11 @@ string q2 = (Console.ReadLine().ToUpper());
 if (q2 == "B")
 {
     correctAnswer();
-    q2Answer = 1;
+    score++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is B");
-    q2Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -144,12 +141,11 @@ string q3 = (Console.ReadLine().ToUpper());
 if (q3 == "A")
 {
     correctAnswer();
-    q3Answer = 1;
+    score++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is A");
-    q3Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -162,12 +158,11 @@ string q4 = (Console.ReadLine().ToUpper());
 if (q4 == "C")
 {
     correctAnswer();
-    q4Answer = 1;
+    score++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is C");
-    q4Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -184,12 +179,11 @@ string q5 = (Console.ReadLine().ToUpper());
 if (q5 == "B")
 {
     correctAnswer();
-    q5Answer = 1;
+    score++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is B");
-    q5Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -202,12 +196,11 @@ string q6 = (Console.ReadLine().ToUpper());
 if (q6 == "C")
 {
     correctAnswer();
-    q6Answer = 1;
+    score++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is C");
-    q6Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -220,12 +213,11 @@ string q7 = (Console.ReadLine().ToUpper());
 if (q7 == "B")
 {
     correctAnswer();
-    q7Answer = 1;
+    score++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is B");
-    q7Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -238,12 +230,11 @@ string q8 = (Console.ReadLine().ToUpper());
 if (q8 == "B")
 {
     correctAnswer();
-    q8Answer = 1;
+    score++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is B");
-    q8Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -256,12 +247,11 @@ string q9 = (Console.ReadLine().ToUpper());
 if (q9 == "B")
 {
     correctAnswer();
-    q9Answer = 1;
+    score++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is B");
-    q9Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -274,12 +264,11 @@ string q10 = (Console.ReadLine().ToUpper());
 if (q10 == "C")
 {
     correctAnswer();
-    q10Answer = 1;
+    score++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is C");
-    q10Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -292,13 +281,11 @@ string q11 = (Console.ReadLine().ToUpper());
 if (q11 == "A")
 {
     correctAnswer();
-    q11Answer = 1;
+    score++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is A");
-    q11Answer = 0;
- 
 }
 
 Console.WriteLine(" ");
@@ -311,12 +298,11 @@ string q12 = (Console.ReadLine().ToUpper());
 if (q12 == "B")
 {
     correctAnswer();
-    q12Answer = 1;
+    score++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is B");
-    q12Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -329,12 +315,11 @@ string q13 = (Console.ReadLine().ToUpper());
 if (q13 == "A")
 {
     correctAnswer();
-    q13Answer = 1;
+    score++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is B");
-    q13Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -347,12 +332,11 @@ string q14 = (Console.ReadLine().ToUpper());
 if (q14 == "C")
 {
     correctAnswer();
-    q14Answer = 1;
+    score++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is C");
-    q14Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -365,19 +349,18 @@ string q15 = (Console.ReadLine().ToUpper());
 if (q15 == "C")
 {
     correctAnswer();
-    q15Answer = 1;
+    score++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is C");
-    q15Answer = 0;
 }
 
 Console.Clear();
 Console.WriteLine(" ");
 Console.WriteLine("Well done you have finished level 1!");
 // The bit of code underneath this comment adds all the scores from questions 1-15 and displays them as a number out of 15.
-Console.WriteLine("You got a score of: " + (q15Answer + q14Answer + q13Answer + q12Answer + q11Answer + q10Answer + q9Answer + q8Answer + q7Answer + q6Answer + q5Answer + q4Answer + q3Answer + q2Answer + q1Answer));
+Console.WriteLine("You got a score of " + score + " out of 15");
 Console.WriteLine(" ");
 /*The code underneath asks the user if they would like to retry level 1 and try get a better score.
  If they say no they are asked if they would like to start level 2, if they still say no it will exit the quiz.7*/
@@ -417,8 +400,8 @@ level2:
 
 // This is where level 2 begins
 Console.Clear();
+Console.WriteLine("Goodluck!\n");
 Console.WriteLine("Level 2 begins here\n");
-Console.WriteLine("");
 Console.WriteLine("This level consists of Maori sentances and you have to translate them to English.");
 Console.WriteLine("Press enter to begin level 2:");
 string enterStart2 = (Console.ReadLine().ToUpper());
@@ -431,7 +414,7 @@ else
     Console.WriteLine("Goodluck!");
 }
 
-int q16Answer, q17Answer, q18Answer, q19Answer, q20Answer;
+int scorelv2 = 0;
 
 Console.Clear();
 Console.WriteLine(" ");
@@ -444,12 +427,11 @@ string q16 = (Console.ReadLine().ToUpper());
 if (q16 == "A")
 {
     correctAnswer();
-    q16Answer = 1;
+    scorelv2++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is A");
-    q16Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -462,12 +444,11 @@ string q17 = (Console.ReadLine().ToUpper());
 if (q17 == "C")
 {
     correctAnswer();
-    q17Answer = 1;
+    scorelv2++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer C");
-    q17Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -480,12 +461,11 @@ string q18 = (Console.ReadLine().ToUpper());
 if (q18 == "A")
 {
     correctAnswer();
-    q18Answer = 1;
+    scorelv2++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is A");
-    q18Answer=0;
 }
 
 Console.WriteLine(" ");
@@ -498,12 +478,11 @@ string q19 = (Console.ReadLine().ToUpper());
 if (q19 == "B")
 {
     correctAnswer();
-    q19Answer = 1;
+    scorelv2++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is B");
-    q19Answer = 0;
 }
 
 Console.WriteLine(" ");
@@ -516,20 +495,18 @@ string q20 = (Console.ReadLine().ToUpper());
 if (q20 == "")
 {
     correctAnswer();
-    q20Answer = 1;
+    scorelv2++;
 }
 else
 {
     Console.WriteLine("This is incorrect, the answer is C");
-    q20Answer = 0;
 }
 
 
-int level2Score = (q16Answer + q17Answer + q18Answer + q19Answer + q20Answer);
 Console.Clear();
 Console.WriteLine(" ");
 Console.WriteLine("Well done you have finished level 2!");
-Console.WriteLine("You got a score of: " + (level2Score) + "out of 5");
+Console.WriteLine("You got a score of: " + scorelv2 + "out of 5");
 Console.WriteLine(" ");
 
 // The code underneath asks you if you would like to retry level 2 or retry the whole quiz again.
@@ -567,7 +544,6 @@ else
     invalidInput();
     goto retryLevel2;
 }
-
 
 quizEnd:
 Console.Clear();
