@@ -6,38 +6,38 @@ quiz goes on. The second level is a 5 Maori sentence based multipul choice quest
 /*
 Code starts
 
+Score variables are stated
+
 -Intro to quiz-
 
 It asks you if you would like to start with level 2, if yes it goes to level 2, if no it continues with level 1.
 It then asks you to press enter to start.
 
-Question 1, if answer wrong it makes q1Answer have a value of 0 and it says what the correct answer is and moves on. 
-But if it is correct it makes q1Answer have a value of 1 and then moves onto next question.
+Question 1, if the answer is wrong it makes doesn't add anything to the score variable and then it tells you what the correct answer is and moves on to the next question.
+But if it is correct it adds 1 to the score variable and then moves to the next question.
 
-Question 2, if answer wrong it makes q1Answer have a value of 0 and it says what the correct answer is and moves on. 
-But if it is correct it makes q2Answer have a value of 1 and then moves onto next question.
+Question 2, if the answer is wrong it makes doesn't add anything to the score variable and then it tells you what the correct answer is and moves on to the next question.
+But if it is correct it adds 1 to the score variable and then moves to the next question.
 
 What happens to question 1 and 2 happen to every question up until question 15.
 
-The code then tells you that you finished level 1 and it says your score by adding up all the variables.(score out of 15)
+The code then tells you that you finished level 1 and then displays the score you got using the score variable (out of 15)
 
 It then asks you if you would like to restart level 1, if yes then it goes to the start, if no then it moves onto level 2
-
-Decleared int q16Answer - q20Answer
 
 -Intro to level 2-
 
 It then asks you to press enter to start level 2
 
-Question 1, if answer wrong it makes q16Answer have a value of 0 and it says what the correct answer is and moves on. 
-But if it is correct it makes q16Answer have a value of 1 and then moves onto next question.
+Question 1, if the answer is wrong it makes doesn't add anything to the score variable and then it tells you what the correct answer is and moves on to the next question.
+But if it is correct it adds 1 to the score variable and then moves to the next question.
 
-Question 2, if answer wrong it makes q17Answer have a value of 0 and it says what the correct answer is and moves on. 
-But if it is correct it makes q17Answer have a value of 1 and then moves onto next question.
+Question 2, if the answer is wrong it makes doesn't add anything to the score variable and then it tells you what the correct answer is and moves on to the next question.
+But if it is correct it adds 1 to the score variable and then moves to the next question.
 
 This happens for the rest of the questions up to question 5.
 
-The code then tells you that you finished level 2 and it says your score by adding up all the variables.(score out of 5)
+The code then tells you that you finished level 2 and then it displays the score using the score variable (score out of 5)
 
 It the asks you if you would like to retry level 2 to get a better score, if yes it goes to the start of level 2.
 If no it asks you if you would like to retry the whole quiz, if yes it goes to the begining.
@@ -46,6 +46,13 @@ If no again it says "Have a nice day"
 Code ends
 */
 
+int score = 0;
+int scorelv2 = 0;
+
+static int totalScore(int score, int scorelv2)
+{
+    return score + scorelv2;
+}
 
 static void correctAnswer() // This shows when the user gets a question right. I did this so I dont have to type as much.
 {
@@ -56,6 +63,7 @@ static void invalidInput() // This gets shown when the user inputs a invalid let
 {
     Console.WriteLine("This input is invalid, try again!");
 }
+
 
 //Intro to quiz:
 Console.WriteLine(" ");
@@ -82,7 +90,7 @@ else
 }
 
 quizStart:
-int score = 0;
+
 Console.WriteLine("Press enter to start level 1");
 string enterStart = (Console.ReadLine().ToUpper());
 if (enterStart == " ")
@@ -414,8 +422,6 @@ else
     Console.WriteLine("Goodluck!");
 }
 
-int scorelv2 = 0;
-
 Console.Clear();
 Console.WriteLine(" ");
 Console.WriteLine("Question 1: What does Haere mai ki konei mean in English?");
@@ -509,6 +515,7 @@ Console.WriteLine("Well done you have finished level 2!");
 Console.WriteLine("You got a score of: " + scorelv2 + "out of 5");
 Console.WriteLine(" ");
 
+
 // The code underneath asks you if you would like to retry level 2 or retry the whole quiz again.
 retryLevel2:
 Console.WriteLine("Would you like to try level 2 again and try get a better score? \n[YES]/[NO]");
@@ -545,7 +552,7 @@ else
     goto retryLevel2;
 }
 
-quizEnd:
 Console.Clear();
+quizEnd:
 Console.WriteLine("Have a nice day!");
 // This is the end of the quiz.
