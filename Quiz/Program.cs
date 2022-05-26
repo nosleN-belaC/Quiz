@@ -1,9 +1,8 @@
 ﻿// Quiz made by Caleb Nelson
 
 /* This code is 2 levels of a multipul choice Maori quiz, the first having 15 questions with them getting harder as
-quiz goes on. The second level is a 5 Maori sentence based multipul choice question quiz */
+quiz goes on. The second level is a 5 Maori sentence based multipul choice question quiz
 
-/*
 Code starts
 
 Score variables are stated
@@ -327,7 +326,7 @@ if (q13 == "A")
 }
 else
 {
-    Console.WriteLine("This is incorrect, the answer is B");
+    Console.WriteLine("This is incorrect, the answer is A");
 }
 
 Console.WriteLine(" ");
@@ -512,7 +511,7 @@ else
 Console.Clear();
 Console.WriteLine(" ");
 Console.WriteLine("Well done you have finished level 2!");
-Console.WriteLine("You got a score of: " + scorelv2 + "out of 5");
+Console.WriteLine("You got a score of: " + scorelv2 + " out of 5");
 Console.WriteLine(" ");
 
 
