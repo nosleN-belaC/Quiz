@@ -48,9 +48,10 @@ Code ends
 int score = 0;
 int scorelv2 = 0;
 
-static int totalScore(int score, int scorelv2)
+static bool passingScore(int score = 6, 5, 4, 3,)
 {
-    return score + scorelv2;
+    bool passed = false;
+    return passed;
 }
 
 static void correctAnswer() // This shows when the user gets a question right. I did this so I dont have to type as much.
