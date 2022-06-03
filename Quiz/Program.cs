@@ -102,6 +102,9 @@ else
     Console.WriteLine("Goodluck!");
 }
 
+/* Under this comment Console.Clear() is being used. This basically clears the console screen when it gets run. Making it
+ * more clear to read because there isn't has much text on the screen.
+*/
 Console.Clear();
 Console.WriteLine("Goodluck!");
 Console.WriteLine(" ");
@@ -544,7 +547,7 @@ goto quizStart;
 
 else if (retryQuiz == "NO")
 {
-    goto quizEnd;
+    goto totalscoreQuestion;
 }
 else
 {
@@ -553,11 +556,11 @@ else
 }
 
 totalscoreQuestion:
-Console.WriteLine("Would you like to see you're total score?\n[YES]/[NO]");
+Console.WriteLine("Would you like to see you're total score from both levels?\n[YES]/[NO]");
 string seetotal = (Console.ReadLine().ToUpper());
 if (seetotal == "YES")
 {
-    Console.WriteLine("You got a total score of " + Totalscore + " out of 20");
+    Console.WriteLine("You got a total score of " + Totalscore + " out of 20.\nThis is the score from both levels so if you didn't do one of them, it will show a lower score.");
 }
 else if (seetotal == "NO")
 {
@@ -569,7 +572,7 @@ else
     goto totalscoreQuestion;
 }
 
-Console.Clear();
+//Console.Clear();
 quizEnd:
 Console.WriteLine("Have a nice day!");
 // This is the end of the quiz.
