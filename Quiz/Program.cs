@@ -48,12 +48,6 @@ Code ends
 int score = 0;
 int scorelv2 = 0;
 
-static int Totalscore(int score, int scorelv2)
-{
-    int Lv1andLv2score = score + scorelv2;
-    return Lv1andLv2score;
-}
-
 static void correctAnswer() // This shows when the user gets a question right. I did this so I dont have to type as much.
 {
     Console.WriteLine("You are correct, well done!");
@@ -547,29 +541,12 @@ goto quizStart;
 
 else if (retryQuiz == "NO")
 {
-    goto totalscoreQuestion;
-}
-else
-{
-    invalidInput();
-    goto retryLevel2;
-}
-
-totalscoreQuestion:
-Console.WriteLine("Would you like to see you're total score from both levels?\n[YES]/[NO]");
-string seetotal = (Console.ReadLine().ToUpper());
-if (seetotal == "YES")
-{
-    Console.WriteLine("You got a total score of " + Totalscore + " out of 20.\nThis is the score from both levels so if you didn't do one of them, it will show a lower score.");
-}
-else if (seetotal == "NO")
-{
     goto quizEnd;
 }
 else
 {
     invalidInput();
-    goto totalscoreQuestion;
+    goto retryLevel2;
 }
 
 //Console.Clear();
