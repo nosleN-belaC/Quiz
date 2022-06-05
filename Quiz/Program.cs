@@ -65,15 +65,15 @@ Console.WriteLine("This is a multi level Te Reo Maori word and phrase quiz.");
 Console.WriteLine("Please enter A, B or C when answering the questions otherwise you will be wrong.");
 Console.WriteLine("There are 2 levels, 15 in level 1 and 5 in level 2.");
 Console.WriteLine("The questions in level 1 start off easy and get harder as the quiz goes on.");
-Console.WriteLine("Level 2 is mainly about Maori sentances.\n");
+Console.WriteLine("Level 2 is mainly about Maori sentences.\n");
 level2Check:
-Console.WriteLine("Would you rather start with the harder Maori quiz (Level 2)?\n[YES]/[NO]");
+Console.WriteLine("Would you rather start with the harder Maori quiz (Level 2)?\n[Y]/[N]");
 string startLevel2 = Console.ReadLine().ToUpper();
-if (startLevel2 == "YES")
+if (startLevel2 == "Y")
 {
     goto level2;
 }
-else if (startLevel2 == "NO")
+else if (startLevel2 == "N")
 {
     goto quizStart;
 }
@@ -370,16 +370,16 @@ Console.WriteLine(" ");
 /*The code underneath asks the user if they would like to retry level 1 and try get a better score.
  If they say no they are asked if they would like to start level 2, if they still say no it will exit the quiz.7*/
 level1Check:
-Console.WriteLine("Would you like to try level 1 again and try get a better score? \n[YES]/[NO]");
+Console.WriteLine("Would you like to try level 1 again and try get a better score? \n[Y]/[N]");
 string retry = (Console.ReadLine().ToUpper());
-if (retry == "YES")
+if (retry == "Y")
 {
     goto quizStart;
 }
-else if (retry == "NO")
+else if (retry == "N")
 {
     Console.WriteLine(" ");    
-    Console.WriteLine("Would you like to try level 2?\n[YES]/[NO]");
+    Console.WriteLine("Would you like to try level 2?\n[Y]/[N]");
 }
 else
 {
@@ -387,11 +387,11 @@ else
     goto level1Check;
 }
 string level2Start = (Console.ReadLine().ToUpper());
-if (level2Start == "YES")
+if (level2Start == "Y")
 {
     goto level2;
 }
-else if (level2Start == "NO")
+else if (level2Start == "N")
 {
     goto quizEnd;
 }
@@ -515,17 +515,17 @@ Console.WriteLine(" ");
 
 // The code underneath asks you if you would like to retry level 2 or retry the whole quiz again.
 retryLevel2:
-Console.WriteLine("Would you like to try level 2 again and try get a better score? \n[YES]/[NO]");
+Console.WriteLine("Would you like to try level 2 again and try get a better score? \n[Y]/[N]");
 
 string  retryL2= (Console.ReadLine().ToUpper());
-if (retryL2== "YES")
+if (retryL2== "Y")
 {
 goto level2;
 }
-else if (retryL2 == "NO")
+else if (retryL2 == "N")
 {
 Console.WriteLine(" ");
-Console.WriteLine("Would you like to try restart the whole quiz?\n[YES]/[NO]");
+Console.WriteLine("Would you like to try restart the whole quiz?\n[Y]/[N]");
 }
 else
 {
@@ -534,12 +534,12 @@ else
 }
 
 string retryQuiz = (Console.ReadLine().ToUpper());
-if (retryQuiz == "YES")
+if (retryQuiz == "Y")
 {
 goto quizStart;
 }
 
-else if (retryQuiz == "NO")
+else if (retryQuiz == "N")
 {
     goto quizEnd;
 }
